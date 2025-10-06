@@ -20,13 +20,13 @@ $DOCKER_CMD build
 
 # Ejecutar ingesta una vez
 echo "📥 Ingestionando datos de estudiantes..."
-$DOCKER_CMD run --rm ingesta-estudiantes python ingesta_estudiantes.py
+$DOCKER_CMD run --rm ingesta-estudiantes python ingesta-estudiantes.py
 
 echo "📥 Ingestionando datos de cursos..."
-$DOCKER_CMD run --rm ingesta-cursos python ingesta_cursos.py
+$DOCKER_CMD run --rm ingesta-cursos python ingesta-cursos.py
 
 echo "📥 Ingestionando datos de inscripciones..."
-$DOCKER_CMD run --rm ingesta-inscripciones python ingesta_inscripciones.py
+$DOCKER_CMD run --rm ingesta-inscripciones python ingesta-inscripciones.py
 
 echo "✅ Ingesta completada!"
 echo "📊 Verifica en S3: s3://inscripciones-data-2025-camila/raw-data/"

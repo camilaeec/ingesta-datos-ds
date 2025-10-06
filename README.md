@@ -25,7 +25,7 @@ cp .env.example .env
 docker-compose up --build
 
 # 3. Ejecutar ingesta manual (opcional)
-docker-compose run --rm ingesta-estudiantes python ingesta_estudiantes.py
+docker-compose run --rm ingesta-estudiantes python ingesta-estudiantes.py
 ```
 
 ## 🔧 Configuración
