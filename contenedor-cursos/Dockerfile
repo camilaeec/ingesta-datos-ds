@@ -5,6 +5,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ingesta_cursos.py .
+COPY ingesta-cursos.py .
 
-CMD ["python", "ingesta_cursos.py"]
+CMD ["python", "ingesta-cursos.py"]
