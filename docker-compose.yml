@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  ingesta-estudiantes:
+    build: ./contenedor-estudiantes
+    environment:
+      - API_URL=${API_ESTUDIANTES}
+      - S3_BUCKET=${S3_BUCKET}
+      - AWS_REGION=${AWS_REGION}
+    volumes:
+      - ~/.aws:/root/.aws:ro
+
+  ingesta-cursos:
+    build: ./contenedor-cursos
+    environment:
+      - API_URL=${API_CURSOS}
+      - S3_BUCKET=${S3_BUCKET}
+      - AWS_REGION=${AWS_REGION}
+    volumes:
+      - ~/.aws:/root/.aws:ro
+
+  ingesta-inscripciones:
+    build: ./contenedor-inscripciones
+    environment:
+      - API_URL=${API_INSCRIPCIONES}
+      - S3_BUCKET=${S3_BUCKET}
+      - AWS_REGION=${AWS_REGION}
+    volumes:
+      - ~/.aws:/root/.aws:ro
